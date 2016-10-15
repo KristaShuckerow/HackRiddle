@@ -8,7 +8,9 @@ chrome.extension.sendMessage({}, function(response) {
             tmp.appendChild(bodyClone);
             bodyClone = tmp.innerHTML;
             //html stripping regex
+            var scriptRegex = /(<script>[^>]+<\/script>)/ig;
             var regex = /(<([^>]+)>)/ig;
+            bodyClone = bodyClone.replace(scriptRegex, " ");
             bodyClone = bodyClone.replace(regex, " ");
             console.log(bodyClone);
 	    }
