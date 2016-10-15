@@ -13,6 +13,14 @@ chrome.extension.sendMessage({}, function(response) {
             bodyClone = bodyClone.replace(scriptRegex, " ");
             bodyClone = bodyClone.replace(regex, " ");
             console.log(bodyClone);
+            httpPost('http://localhost:8000/', bodyClone);
 	    }
 	}, 10);
 });
+
+function httpPost(theUrl, text){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("POST", theUrl, false); // false for synchronous request
+    xmlHttp.send({body: text});
+    return xmlHttp.responseText;
+}
