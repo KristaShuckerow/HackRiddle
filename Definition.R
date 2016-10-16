@@ -9,4 +9,4 @@ wordSearch <- "http://api.wordnik.com:80/v4/word.json/query/definitions?limit=20
 newSearch <- gsub("query", newWord, wordSearch)
 wordDef <- fromJSON(newSearch)
 wordDefText <- wordDef$text
-cat(wordDefText[1])
+print(wordDefText[1])
