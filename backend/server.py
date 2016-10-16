@@ -13,7 +13,7 @@ def execR():
     definition = subprocess.check_output(["Rscript", "../Definition.R", request.data])
     definition = definition[len(request.data):]
     print definition
-    return difinition
+    return definition
 
 
 if __name__ == "__main__":
