@@ -1,7 +1,7 @@
 #CALLING API for dictionary
 #reading in word via command line
-install.packages('jsonlite', repos='http://cran.us.r-project.org')
-library(jsonlite)
+#install.packages('jsonlite', repos='http://cran.us.r-project.org')
+#library(jsonlite)
 newWord = commandArgs()
 print(newWord)
 q()
