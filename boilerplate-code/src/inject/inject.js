@@ -13,8 +13,10 @@ chrome.extension.sendMessage({}, function(response) {
             var regex = /(<([^>]+)>)/ig;
             bodyClone = bodyClone.replace(scriptRegex, " ");
             bodyClone = bodyClone.replace(regex, " ");
+            bodyClone = bodyClone.replace(/("+)/g, "");
+            bodyClone = bodyClone.replace(/(,+)/g, "");
             console.log(bodyClone);
-            console.log(httpPost('http://localhost:8000/', bodyClone));
+            console.log("Response is " + httpPost('http://localhost:5000/', bodyClone));
 	    }
 	}, 10);
 });
@@ -23,7 +25,9 @@ function httpPost(theUrl, text){
     var http = new XMLHttpRequest();//Send the proper header information along with the request
 
     http.open("POST", theUrl, false); // false for synchronous request
-    http.send(text);
+    //http.setRequestHeader('Content-Type', 'application/json');
+
+    http.send("banana");
 
     return http.responseText;
 

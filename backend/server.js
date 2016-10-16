@@ -2,8 +2,11 @@ var app = require('express')();
 var fs = require('fs');
 const exec = require('child_process').exec;
 var http = require('http');
+var bp = require('body-parser');
+ app.use(bp.json());
+ app.use(bp.urlencoded({extended: true}));
 app.post('/', function (req, res) {
-    //console.log(req);
+    console.log(req);
     exec('Rscript ../Definition.R ' + 'banana', (error, stdout, stderr) => {
         if (error) {
             console.error(`exec error: ${error}`);
