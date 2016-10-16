@@ -1,0 +1,39 @@
+
+R version 3.3.1 (2016-06-21) -- "Bug in Your Hair"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> #CALLING API for dictionary
+> #reading in word via command line
+> #install.packages('jsonlite', repos='http://cran.us.r-project.org')
+> #library(jsonlite)
+> newWord = commandArgs()
+> print(newWord)
+[1] "/Library/Frameworks/R.framework/Resources/bin/exec/R"
+[2] "-f"                                                  
+[3] "Definition.R"                                        
+[4] "--restore"                                           
+[5] "--save"                                              
+[6] "--no-readline"                                       
+[7] "--args"                                              
+[8] "banana"                                              
+> q()
+> proc.time()
+   user  system elapsed 
+  0.187   0.046   0.316 

@@ -1,3 +1,4 @@
+
 chrome.extension.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
 	    if (document.readyState === "complete") {
@@ -20,11 +21,10 @@ chrome.extension.sendMessage({}, function(response) {
 
 function httpPost(theUrl, text){
     var http = new XMLHttpRequest();//Send the proper header information along with the request
-    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    http.setRequestHeader("Content-length", text.length);
-    http.setRequestHeader("Connection", "close");
 
     http.open("POST", theUrl, false); // false for synchronous request
     http.send(text);
     return http.responseText;
+
+    // $.post("http://localhost:8000/", text);
 }
