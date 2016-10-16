@@ -1,13 +1,13 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Skill-Reader",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Created to analyze word definitions and reading level",
+  "homepage_url": "http://www.dictionary.com/",
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/logo.png",
+    "48": "icons/logo.png",
+    "128": "icons/logo.png"
   },
   "default_locale": "en",
   "background": {
@@ -15,7 +15,7 @@
     "persistent": true
   },
   "page_action": {
-    "default_icon": "icons/icon19.png",
+    "default_icon": "icons/logo.png",
     "default_title": "page action demo",
     "default_popup": "src/page_action/page_action.html"
   },
@@ -25,7 +25,7 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*"
+        "https://*/*"
       ],
       "css": [
         "src/inject/inject.css"
@@ -33,10 +33,14 @@
     },
     {
       "matches": [
-        "http://*/*"
+        "https://*/*"
       ],
       "js": [
+        "js/c3.min.js",
+        "js/d3.v3.min.js",
+        "js/jquery/jquery.min.js",
         "src/inject/inject.js"
+
       ]
     }
   ]
