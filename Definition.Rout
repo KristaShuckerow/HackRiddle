@@ -17,23 +17,13 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
-[Previously saved workspace restored]
-
 > #CALLING API for dictionary
 > #reading in word via command line
 > #install.packages('jsonlite', repos='http://cran.us.r-project.org')
 > #library(jsonlite)
 > newWord = commandArgs()
-> print(newWord)
-[1] "/Library/Frameworks/R.framework/Resources/bin/exec/R"
-[2] "-f"                                                  
-[3] "Definition.R"                                        
-[4] "--restore"                                           
-[5] "--save"                                              
-[6] "--no-readline"                                       
-[7] "--args"                                              
-[8] "banana"                                              
-> q()
+> cat(newWord)
+/Library/Frameworks/R.framework/Resources/bin/exec/R -f Definition.R --restore --save --no-readline --vanilla --args banana> q()
 > proc.time()
    user  system elapsed 
-  0.187   0.046   0.316 
+  0.170   0.037   0.215 

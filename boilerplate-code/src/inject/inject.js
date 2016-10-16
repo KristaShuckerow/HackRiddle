@@ -14,7 +14,7 @@ chrome.extension.sendMessage({}, function(response) {
             bodyClone = bodyClone.replace(scriptRegex, " ");
             bodyClone = bodyClone.replace(regex, " ");
             console.log(bodyClone);
-            httpPost('http://localhost:8000/', bodyClone);
+            console.log(httpPost('http://localhost:8000/', bodyClone));
 	    }
 	}, 10);
 });
@@ -24,6 +24,7 @@ function httpPost(theUrl, text){
 
     http.open("POST", theUrl, false); // false for synchronous request
     http.send(text);
+
     return http.responseText;
 
     // $.post("http://localhost:8000/", text);

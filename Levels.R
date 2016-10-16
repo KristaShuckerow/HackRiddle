@@ -1,3 +1,7 @@
+install.packages('tm', repos='http://cran-us.r-project.org')
+install.packages('qdap', repos='http://cran.us.r-project.org')
+install.packages('koRpus', repos='http://cran.us.r-project.org')
+
 library(koRpus)
 library(qdap)
 
