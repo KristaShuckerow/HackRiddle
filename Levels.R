@@ -1,3 +1,6 @@
+library(koRpus)
+library(qdap)
+
 
 # in file directory: tag-english name.txt > name2.txt
 
