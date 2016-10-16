@@ -19,8 +19,12 @@ chrome.extension.sendMessage({}, function(response) {
 });
 
 function httpPost(theUrl, text){
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("POST", theUrl, false); // false for synchronous request
-    xmlHttp.send({body: text});
-    return xmlHttp.responseText;
+    var http = new XMLHttpRequest();//Send the proper header information along with the request
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.setRequestHeader("Content-length", text.length);
+    http.setRequestHeader("Connection", "close");
+
+    http.open("POST", theUrl, false); // false for synchronous request
+    http.send(text);
+    return http.responseText;
 }

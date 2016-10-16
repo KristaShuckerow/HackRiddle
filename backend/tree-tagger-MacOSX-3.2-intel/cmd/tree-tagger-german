@@ -2,9 +2,9 @@
 
 # Set these paths appropriately
 
-BIN=/Users/jose/Downloads/tree-tagger-MacOSX-3.2-intel/bin
-CMD=/Users/jose/Downloads/tree-tagger-MacOSX-3.2-intel/cmd
-LIB=/Users/jose/Downloads/tree-tagger-MacOSX-3.2-intel/lib
+BIN=/Users/jose/Documents/hackriddle/HackRiddle/backend/tree-tagger-MacOSX-3.2-intel/bin
+CMD=/Users/jose/Documents/hackriddle/HackRiddle/backend/tree-tagger-MacOSX-3.2-intel/cmd
+LIB=/Users/jose/Documents/hackriddle/HackRiddle/backend/tree-tagger-MacOSX-3.2-intel/lib
 
 OPTIONS="-token -lemma -sgml -pt-with-lemma"
 

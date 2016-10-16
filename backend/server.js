@@ -3,6 +3,7 @@ var fs = require('fs');
 const exec = require('child_process').exec;
 app.post('/', function (req, res) {
     fs.writeFileSync('./text.txt', req.body);
+    console.log(req);
     exec('./tree-tagger-MacOSX-3.2-intel/cmd/tree-tagger-english ./text.txt', (error, stdout, stderr) => {
         if (error) {
             console.error(`exec error: ${error}`);
