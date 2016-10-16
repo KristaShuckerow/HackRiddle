@@ -1,5 +1,6 @@
 #CALLING API for dictionary
 #reading in word via command line
+install.packages("jsonlite")
 library(jsonlite)
 newWord = commandArgs()
 print(args)
