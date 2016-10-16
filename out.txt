@@ -1,0 +1,9 @@
+I	PP	I
+like	VBP	like
+to	TO	to
+eat	VB	eat
+apple	NN	apple
+pie	NN	pie
+on	IN	on
+Wednesdays	NNS	Wednesday
+.	SENT	.
